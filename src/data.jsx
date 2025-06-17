@@ -38,23 +38,23 @@ export const skills = [
 export const projects = [
   {
     id: nanoid(),
-    url: "https://food-call.lovable.app/",
+    url: "https://food-call.netlify.app/",
     title: "Food Call",
-    img: "",
+    img: "src/assets/foodcall.png",
     text: "Surplus food re-distribution application",
   },
   {
     id: nanoid(),
     url: "https://vibrant-vista.netlify.app/",
     title: "Vibrant Vista",
-    img: "",
+    img: "src/assets/vibrant-vista.png",
     text: "AI enhanced blogging website",
   },
   {
     id: nanoid(),
     url: "https://react-menu-example.netlify.app/",
     title: "React Menu",
-    img: "",
+    img: "src/assets/react-menu.png",
     text: "react menu",
   },
 ];
