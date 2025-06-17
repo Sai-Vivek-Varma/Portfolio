@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "prebuild": "npm cache clean --force",
+    "build": "npm run your-build-command",
     "lint": "eslint .",
     "preview": "vite preview"
   },
