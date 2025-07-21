@@ -2,6 +2,10 @@
 
 A modern, interactive portfolio website showcasing my skills as a Full-Stack Developer. Built with React, Three.js, and featuring smooth animations and 3D models.
 
+## 🌐 Live Demo
+
+🔗 **[View Live Portfolio](https://saivivekvarma.netlify.app)**
+
 ## 🚀 Features
 
 - **Interactive 3D Models**: Room scene with computer setup using Three.js and React Three Fiber
