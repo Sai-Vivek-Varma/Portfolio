@@ -4,7 +4,7 @@ A modern, interactive portfolio website showcasing my skills as a Full-Stack Dev
 
 ## 🌐 Live Demo
 
-🔗 **[View Live Portfolio](https://saivivekvarma.netlify.app)**
+**[View Live Portfolio](https://saivivekvarma.netlify.app)**
 
 ## 🚀 Features
 
