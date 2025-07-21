@@ -5,10 +5,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="flex flex-col justify-center">
-          <p>
-            Terms & Conditions
-            <p>+91 8008665018 | saivivek.varma01@gmail.com</p>
-          </p>
+          <p>Terms & Conditions</p>
+          <p>+91 8008665018 | saivivek.varma01@gmail.com</p>
         </div>
         <div className="socials">
           {socialImgs.map((socialImg, index) => (

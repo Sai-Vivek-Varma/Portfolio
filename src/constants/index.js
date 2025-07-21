@@ -147,29 +147,6 @@ export const expCards = [
   },
 ];
 
-export const techStackImgs = [
-  {
-    name: "Frontend Development",
-    imgPath: "/images/logos/react.png",
-  },
-  {
-    name: "Backend Development",
-    imgPath: "/images/logos/nodejs.png",
-  },
-  {
-    name: "Interactive UI Design",
-    imgPath: "/images/logos/tailwindcss.png",
-  },
-  {
-    name: "Database Management",
-    imgPath: "/images/logos/monogdb.png",
-  },
-  {
-    name: "Version Control",
-    imgPath: "/images/logos/git.svg",
-  },
-];
-
 export const techStackIcons = [
   {
     name: "Frontend Development",

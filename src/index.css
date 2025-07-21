@@ -86,11 +86,14 @@ section {
 
   .hero-text {
     @apply flex flex-col justify-center md:text-[60px] text-[30px] font-semibold relative z-10 pointer-events-none;
+    transform: translate3d(0, 0, 0);
+     will-change: transform;
     img {
       @apply size-8 md:size-10 object-contain;
     }
     .slide {
       @apply absolute pt-0 px-2 md:px-5 py-[30px] h-[48px] md:h-[78px] md:translate-y-1 translate-y-0 overflow-hidden;
+      transform: translate3d(0, 0, 0);
     }
   }
 
@@ -236,6 +239,8 @@ section {
 
   .marquee-item {
     @apply md:w-40 w-32;
+     transform: translate3d(0, 0, 0); 
+    will-change: transform; 
   }
 
   .timeline-wrapper {
@@ -408,16 +413,18 @@ section {
   position: absolute;
   overflow: hidden;
   animation: marquee 60s linear infinite;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 .marquee-item {
   float: left;
 }
 @keyframes marquee {
   0% {
-    left: 0;
+    transform: translate3d(0, 0, 0);
   }
   100% {
-    left: -100%;
+    transform: translate3d(-50%, 0, 0);
   }
 }
 /* marquee end */
@@ -441,7 +448,7 @@ section {
   border-radius: 12px;
   border: 2px solid transparent;
   background: var(--gradient);
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   mask: linear-gradient(#0000, #0000),
     conic-gradient(
       from calc((var(--start) - 15) * 1deg),
@@ -453,6 +460,8 @@ section {
   mask-clip: padding-box, border-box;
   opacity: 0;
   transition: 0.5s ease;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: opacity, transform;
 }
 
 .glow {
@@ -469,4 +478,10 @@ section {
 
 .card:hover::before {
   opacity: 1;
+}
+
+.gpu-accelerated {
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  backface-visibility: hidden;
 }

@@ -1,6 +1,7 @@
+import { Suspense } from "react";
 import AnimatedCounter from "../components/AnimatedCounter";
 import Button from "../components/Button";
-import HeroExperience from "../components/models/HeroModels/HeroExperience";
+import HeroExperience from "../components/models/HeroModels/HeroExperience"; // Import directly for now
 import { words } from "../constants";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -13,6 +14,7 @@ const Hero = () => {
       { y: 0, opacity: 1, stagger: 0.2, duration: 1, ease: "power2.inOut" }
     );
   });
+
   return (
     <section id="hero" className="relative overflow-hidden">
       <div className="absolute top-0 left-0 z-10">
@@ -26,9 +28,9 @@ const Hero = () => {
                 Shaping
                 <span className="slide">
                   <span className="wrapper">
-                    {words.map((word) => (
+                    {words.map((word, index) => (
                       <span
-                        key={word.text}
+                        key={`${word.text}-${index}`}
                         className="flex items-center md:gap-3 gap-1 pb-2"
                       >
                         <img
@@ -59,7 +61,15 @@ const Hero = () => {
         </header>
         <figure>
           <div className="hero-3d-layout">
-            <HeroExperience />
+            <Suspense
+              fallback={
+                <div className="flex items-center justify-center h-full">
+                  <div className="text-white">Loading...</div>
+                </div>
+              }
+            >
+              <HeroExperience />
+            </Suspense>
           </div>
         </figure>
       </div>
