@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { navLinks } from "../constants";
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const isScrolled = window.scrollY > 10;
-      setIsScrolled(true);
+      setScrolled(isScrolled);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -16,18 +16,19 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`navbar ${isScrolled ? "scrolled" : "not-scrolled"}`}>
-      <div className="inner">
+    <header className={`navbar ${scrolled ? "scrolled" : "not-scrolled"}`}>
+      <div className="inner ">
         <a href="#hero" className="logo">
           Vivek
         </a>
+
         <nav className="desktop">
           <ul>
             {navLinks.map(({ link, name }) => (
               <li key={name} className="group">
                 <a href={link}>
                   <span>{name}</span>
-                  <span className="underline"></span>
+                  <span className="underline" />
                 </a>
               </li>
             ))}
